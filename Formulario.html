@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <title>Formulário</title>
+    <style>
+       
+       body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background-color: #4CAF50; /* Fundo verde */
+            padding: 80px;
+            border-radius: 95px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 400px; /* Largura fixa */
+        }
+        .form-container h1 {
+            color: white;
+            text-align: center;
+        }
+        .form-container label {
+            color: white;
+            margin-top: 10px;
+            display: block;
+        }
+        .form-container input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 3px;
+        }
+        .form-container .radio-group {
+            margin: 5px 0;
+            color: white;
+        }
+        .form-container input[type="radio"] {
+            margin-right: 5px;
+        }
+        .form-container .option-label {
+            display: inline-block;
+            margin-right: 15px; /* Espaço entre as opções */
+        }
+        .form-container button {
+            background-color: white;
+            color: #4CAF50;
+            border: none;
+            padding: 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 105%; /* Botão ocupa toda a largura */
+        }
+        .form-container button:hover {
+            background-color: #e7e7e7;
+        }
+
+        .form-container textarea {
+            width: 415px; /* Largura fixa de 100 pixels */
+            height: 100px; /* Altura fixa de 100 pixels */
+            resize: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1> ✶ Formulário</h1>
+        <p></p>
+        <form>
+            <label for="rm">Qual é o seu RM?</label>
+            <input type="text" id="rm" name="rm" required>
+
+            <label for="turma">Qual é a sua turma?</label>
+            <input type="text" id="turma" name="turma" required>
+
+           
+            <label>Qual a quantidade de comida que você pega?</label>
+            <div class="radio-group">
+                <label class="option-label">
+                    <input type="radio" id="pouco" name="quantidade" value="pouco" required>
+                    pouca
+                </label>
+                <label class="option-label">
+                    <input type="radio" id="medio" name="quantidade" value="medio" required>
+                    média
+                </label>
+                <label class="option-label">
+                    <input type="radio" id="muito" name="quantidade" value="muito" required>
+                    muita
+                </label>
+            </div>
+            <p></p>
+            <label for="nota">Dê uma nota (0 a 5) para a comida oferecida hoje</label>
+            <input type="text" id="nota" name="nota" required>
+
+            <label>Você considera que há uma variedade de alimentos na alimentação fornecida pela escola?</label>
+            <div class="radio-group">
+                <label class="option-label">
+                    <input type="radio" id="sim" name="variedade" value="sim" required>
+                    sim
+                </label>
+                <label class="option-label">
+                    <input type="radio" id="nao" name="variedade" value="nao" required>
+                    não
+                </label>
+            </div>
+            <p></p>
+
+            <label>Quais suas sugestões para melhorias no preparo da comida?</label>
+            <textarea id="sugestoes" name="sugestoes" required></textarea>
+
+            <br>
+            <p></p>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+</body>
+</html>
